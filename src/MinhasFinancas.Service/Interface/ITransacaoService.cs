@@ -4,8 +4,8 @@ namespace MinhasFinancas.Service.Interface;
 
 public interface ITransacaoService : IBaseService
 {
-    int Adicionar(Movimentacao transacao);
-    int Atualizar(Movimentacao transacao);
+    int Adicionar(Transacao transacao);
+    int Atualizar(Transacao transacao);
     bool Excluir<Transacao>(int Codigo);
-    IEnumerable<Movimentacao> ObterTodos();
+    IEnumerable<Transacao> ObterTodos();
 }

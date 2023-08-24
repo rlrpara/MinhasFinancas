@@ -1,4 +1,4 @@
-﻿using MinhasFinancas.Domain.Entities;
+﻿using MinhasFinancas.Domain.Enum;
 using MinhasFinancas.Domain.Interface;
 
 namespace MinhasFinancas.Infra.Database.Interface;

@@ -1,4 +1,4 @@
-﻿namespace MinhasFinancas.Domain.Entities;
+﻿namespace MinhasFinancas.Domain.Enum;
 
 public enum ETipoProjeto
 {

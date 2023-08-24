@@ -4,8 +4,8 @@ namespace MinhasFinancas.Domain.Interface;
 
 public interface ITransacaoRepository : IBaseRepository
 {
-    Task<int> Adicionar(Movimentacao transacao);
-    Task<int> Atualizar(Movimentacao transacao);
+    Task<int> Adicionar(Transacao transacao);
+    Task<int> Atualizar(Transacao transacao);
     Task<bool> Excluir(int codigo);
-    IEnumerable<Movimentacao> ObterTodos();
+    IEnumerable<Transacao> ObterTodos();
 }

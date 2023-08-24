@@ -24,9 +24,9 @@ public class TransacaoService : BaseService, ITransacaoService
     #endregion
 
     #region [Public Methods]
-    public IEnumerable<Movimentacao> ObterTodos() => _transacaoRepository.ObterTodos();
-    public int Adicionar(Movimentacao transacao) => _transacaoRepository.Adicionar(transacao).Result;
-    public int Atualizar(Movimentacao transacao) => _transacaoRepository.Atualizar(transacao).Result;
+    public IEnumerable<Transacao> ObterTodos() => _transacaoRepository.ObterTodos();
+    public int Adicionar(Transacao transacao) => _transacaoRepository.Adicionar(transacao).Result;
+    public int Atualizar(Transacao transacao) => _transacaoRepository.Atualizar(transacao).Result;
     public bool Excluir<Transacao>(int Codigo) => _transacaoRepository.Excluir(Codigo).Result;
     #endregion
 }

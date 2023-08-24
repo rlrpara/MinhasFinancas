@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace MinhasFinancas.Domain.Entities;
 
 [Table("TRANSACAO")]
-public class Movimentacao : EntityBase
+public class Transacao : EntityBase
 {
     [Column(name: "TIPO")]
     public TipoTransacao Tipo { get; set; }

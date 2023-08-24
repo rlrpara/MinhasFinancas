@@ -18,10 +18,10 @@ public class TransacaoRepository : BaseRepository, ITransacaoRepository
     #endregion
 
     #region [Public Methods]
-    public IEnumerable<Movimentacao> ObterTodos() => _baseRepository.BuscarTodosPorQueryGerador<Movimentacao>();
-    public async Task<int> Adicionar(Movimentacao transacao) => await _baseRepository.AdicionarAsync(transacao);
-    public async Task<int> Atualizar(Movimentacao transacao) => await _baseRepository.AtualizarAsync(transacao.Codigo, transacao);
-    public async Task<bool> Excluir(int codigo) => await _baseRepository.ExcluirAsync<Movimentacao>(codigo) > 0;
+    public IEnumerable<Transacao> ObterTodos() => _baseRepository.BuscarTodosPorQueryGerador<Transacao>();
+    public async Task<int> Adicionar(Transacao transacao) => await _baseRepository.AdicionarAsync(transacao);
+    public async Task<int> Atualizar(Transacao transacao) => await _baseRepository.AtualizarAsync(transacao.Codigo, transacao);
+    public async Task<bool> Excluir(int codigo) => await _baseRepository.ExcluirAsync<Transacao>(codigo) > 0;
 
 
     #endregion

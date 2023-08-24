@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 using MinhasFinancas.CrossCutting.Ioc;
-using MinhasFinancas.Domain.Entities;
+using MinhasFinancas.Domain.Enum;
 using MinhasFinancas.Domain.Interface;
 using MinhasFinancas.Infra.Database;
 
