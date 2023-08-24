@@ -13,19 +13,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04-Domain", "04-Domain", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05-Infra", "05-Infra", "{27B56A07-0026-4538-AD40-916436620985}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinhasFinancas.App", "src\MinhasFinancas.App\MinhasFinancas.App.csproj", "{0239FAF0-43CA-465C-9C17-B14A2A6864A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MinhasFinancas.App", "src\MinhasFinancas.App\MinhasFinancas.App.csproj", "{0239FAF0-43CA-465C-9C17-B14A2A6864A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinhasFinancas.Service", "src\MinhasFinancas.Service\MinhasFinancas.Service.csproj", "{D4D884DF-6B99-4550-A212-3FEEA71BD7C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MinhasFinancas.Service", "src\MinhasFinancas.Service\MinhasFinancas.Service.csproj", "{D4D884DF-6B99-4550-A212-3FEEA71BD7C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinhasFinancas.Domain", "src\MinhasFinancas.Domain\MinhasFinancas.Domain.csproj", "{FF4EED2E-BB44-4F09-A44F-CC98293EF315}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MinhasFinancas.Domain", "src\MinhasFinancas.Domain\MinhasFinancas.Domain.csproj", "{FF4EED2E-BB44-4F09-A44F-CC98293EF315}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05.01-Data", "05.01-Data", "{C099776B-0DE0-4395-AF7B-91EB9DE5C1A1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05.02-Database", "05.02-Database", "{14B9BF09-DFE9-4FD8-B3D0-20B4B5248D5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinhasFinancas.Infra.Data", "src\MinhasFinancas.Infra.Data\MinhasFinancas.Infra.Data.csproj", "{904B3DE7-34C3-456B-B01D-2244A8F97692}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06-CrossCutting", "06-CrossCutting", "{667F0086-85C0-45FB-B406-12F67440F1BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinhasFinancas.Infra.Database", "src\MinhasFinancas.Infra.Database\MinhasFinancas.Infra.Database.csproj", "{E54D4EED-1182-4DB9-A133-9D6F0242FAE3}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06.01-Ioc", "06.01-Ioc", "{63631D5D-37B1-4E2D-9FC6-AE1C3BA04820}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MinhasFinancas.Infra.Database", "src\MinhasFinancas.Infra.Database\MinhasFinancas.Infra.Database.csproj", "{5143A9C3-54A3-408B-B1CC-282D4FD42F8A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MinhasFinancas.CrossCutting.Ioc", "src\MinhasFinancas.CrossCutting.Ioc\MinhasFinancas.CrossCutting.Ioc.csproj", "{2CE4ED02-BAE0-4EF1-A6BB-7CEEE6BFDE7D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MinhasFinancas.Infra.Data", "src\MinhasFinancas.Infra.Data\MinhasFinancas.Infra.Data.csproj", "{A3E78209-A77E-4501-A5A9-6C7817C9F8CE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,14 +53,18 @@ Global
 		{FF4EED2E-BB44-4F09-A44F-CC98293EF315}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF4EED2E-BB44-4F09-A44F-CC98293EF315}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF4EED2E-BB44-4F09-A44F-CC98293EF315}.Release|Any CPU.Build.0 = Release|Any CPU
-		{904B3DE7-34C3-456B-B01D-2244A8F97692}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{904B3DE7-34C3-456B-B01D-2244A8F97692}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{904B3DE7-34C3-456B-B01D-2244A8F97692}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{904B3DE7-34C3-456B-B01D-2244A8F97692}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E54D4EED-1182-4DB9-A133-9D6F0242FAE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E54D4EED-1182-4DB9-A133-9D6F0242FAE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E54D4EED-1182-4DB9-A133-9D6F0242FAE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E54D4EED-1182-4DB9-A133-9D6F0242FAE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5143A9C3-54A3-408B-B1CC-282D4FD42F8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5143A9C3-54A3-408B-B1CC-282D4FD42F8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5143A9C3-54A3-408B-B1CC-282D4FD42F8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5143A9C3-54A3-408B-B1CC-282D4FD42F8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CE4ED02-BAE0-4EF1-A6BB-7CEEE6BFDE7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CE4ED02-BAE0-4EF1-A6BB-7CEEE6BFDE7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CE4ED02-BAE0-4EF1-A6BB-7CEEE6BFDE7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CE4ED02-BAE0-4EF1-A6BB-7CEEE6BFDE7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3E78209-A77E-4501-A5A9-6C7817C9F8CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3E78209-A77E-4501-A5A9-6C7817C9F8CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3E78209-A77E-4501-A5A9-6C7817C9F8CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3E78209-A77E-4501-A5A9-6C7817C9F8CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -65,8 +75,10 @@ Global
 		{FF4EED2E-BB44-4F09-A44F-CC98293EF315} = {CF792F9C-6488-4D30-86DD-98DA657DBBDC}
 		{C099776B-0DE0-4395-AF7B-91EB9DE5C1A1} = {27B56A07-0026-4538-AD40-916436620985}
 		{14B9BF09-DFE9-4FD8-B3D0-20B4B5248D5C} = {27B56A07-0026-4538-AD40-916436620985}
-		{904B3DE7-34C3-456B-B01D-2244A8F97692} = {C099776B-0DE0-4395-AF7B-91EB9DE5C1A1}
-		{E54D4EED-1182-4DB9-A133-9D6F0242FAE3} = {14B9BF09-DFE9-4FD8-B3D0-20B4B5248D5C}
+		{63631D5D-37B1-4E2D-9FC6-AE1C3BA04820} = {667F0086-85C0-45FB-B406-12F67440F1BE}
+		{5143A9C3-54A3-408B-B1CC-282D4FD42F8A} = {14B9BF09-DFE9-4FD8-B3D0-20B4B5248D5C}
+		{2CE4ED02-BAE0-4EF1-A6BB-7CEEE6BFDE7D} = {63631D5D-37B1-4E2D-9FC6-AE1C3BA04820}
+		{A3E78209-A77E-4501-A5A9-6C7817C9F8CE} = {C099776B-0DE0-4395-AF7B-91EB9DE5C1A1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F670C75B-2F4A-4298-9C76-46B08922A559}
