@@ -3,20 +3,74 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MinhasFinancas.App.Views.TransacaoAdd"
              Title="TransacaoAdd">
-    <VerticalStackLayout>
-        <Grid ColumnDefinitions="*, 30">
-            <Label 
-                Text="Novo"
-                VerticalOptions="Center" 
-                HorizontalOptions="Center"
+    <VerticalStackLayout BackgroundColor="White" Spacing="10">
+        <Border
+            BackgroundColor="Black"
+            Stroke="Transparent"
+            Padding="15"
+            StrokeShape="RoundRectangle 30"
+            Margin="15">
+            <Grid ColumnDefinitions="*, 30">
+                <Label 
+                    Text="Novo"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center"
+                    Grid.Column="0"
+                    TextColor="White"
+                />
+                <Label
+                    Text="X"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center"
+                    Grid.Column="1"
+                    TextColor="White"
+                />
+            </Grid>
+        </Border>
+
+        <Grid ColumnDefinitions="*,*" Margin="30, 0">
+            <RadioButton
                 Grid.Column="0"
+                x:Name="Receita"
+                IsChecked="True"
+                Content="Receita"
+                TextColor="Black"
             />
-            <Label
-                Text="X"
-                VerticalOptions="Center" 
-                HorizontalOptions="Center"
+            <RadioButton
+                HorizontalOptions="End"
                 Grid.Column="1"
+                x:Name="Despesa"
+                Content="Despesa"
+                TextColor="Black"
             />
         </Grid>
+
+        <Entry
+            x:Name="Nome"
+            Placeholder="Nome"
+            TextColor="Black"
+            Margin="15, 0"
+        />
+        
+        <DatePicker
+            TextColor="Black"
+            Margin="15, 0"
+        />
+        
+        <Entry
+            x:Name="Valor"
+            Placeholder="Valor"
+            TextColor="Black"
+            Margin="15, 0"
+        />
+
+        <Button
+            Text="Salvar"
+            Margin="15, 0"
+            BackgroundColor="Black"
+            TextColor="White"
+            HorizontalOptions="Center"
+        />
+
     </VerticalStackLayout>
 </ContentPage>

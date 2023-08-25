@@ -14,5 +14,11 @@
             Text="+"
             Clicked="NovoRegistro_Clicked"
         />
+
+        <Button
+            x:Name="EditarRegistro"
+            Text="Edit"
+            Clicked="EditarRegistro_Clicked"
+        />
     </VerticalStackLayout>
 </ContentPage>

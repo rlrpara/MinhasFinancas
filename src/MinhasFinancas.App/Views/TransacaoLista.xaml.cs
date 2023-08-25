@@ -11,4 +11,9 @@ public partial class TransacaoLista : ContentPage
     {
         Application.Current.MainPage = new TransacaoAdd();
     }
+
+    private void EditarRegistro_Clicked(object sender, EventArgs e)
+    {
+        Application.Current.MainPage = new TransacaoEdit();
+    }
 }
