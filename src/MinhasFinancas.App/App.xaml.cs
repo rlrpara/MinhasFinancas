@@ -8,7 +8,7 @@ namespace MinhasFinancas.App
         {
             InitializeComponent();
 
-            MainPage = new TransacaoLista();
+            MainPage = new NavigationPage(new TransacaoLista());
         }
     }
 }
