@@ -67,8 +67,7 @@
         <Button
             Text="Salvar"
             Margin="15, 0"
-            BackgroundColor="Black"
-            TextColor="White"
+            TextColor="Black"
             HorizontalOptions="Center"
         />
 
