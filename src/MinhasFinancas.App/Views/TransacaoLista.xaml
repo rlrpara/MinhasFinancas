@@ -2,23 +2,28 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MinhasFinancas.App.Views.TransacaoLista"
-             Title="Listagem">
+             Title="Listagem"
+             NavigationPage.HasNavigationBar="False">
     <VerticalStackLayout>
-        <Label 
-            Text="Lista de Transação"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        
 
         <Button
             x:Name="NovoRegistro"
             Text="+"
             Clicked="NovoRegistro_Clicked"
+            HorizontalOptions="Center"
         />
 
         <Button
             x:Name="EditarRegistro"
             Text="Edit"
             Clicked="EditarRegistro_Clicked"
+            HorizontalOptions="Center"
         />
+
+        <Grid>
+            
+        </Grid>
+        
     </VerticalStackLayout>
 </ContentPage>
