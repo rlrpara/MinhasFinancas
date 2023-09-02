@@ -147,7 +147,7 @@ public class DatabaseConfiguration : DatabaseConfigurationBase, IDatabaseConfigu
 
                     break;
                 case ETipoBanco.SqLite:
-                    var caminho = Path.Combine(_parametrosConexao.PastaBanco, $"{_parametrosConexao.NomeBanco}.db" ?? "");
+                    var caminho = Path.Combine(_parametrosConexao?.PastaBanco ?? "", $"{_parametrosConexao?.NomeBanco}.db" ?? "");
                     if (!File.Exists(caminho))
                         sqlPesquisa.AppendLine($"");
                     else
