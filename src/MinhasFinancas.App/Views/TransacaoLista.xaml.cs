@@ -9,11 +9,11 @@ public partial class TransacaoLista : ContentPage
 
     private void NovoRegistro_Clicked(object sender, EventArgs e)
     {
-        Navigation.PushAsync(new TransacaoAdd());
+        Navigation.PushModalAsync(new TransacaoAdd());
     }
 
     private void EditarRegistro_Clicked(object sender, EventArgs e)
     {
-        Navigation.PushAsync(new TransacaoEdit());
+        Navigation.PushModalAsync(new TransacaoEdit());
     }
 }
