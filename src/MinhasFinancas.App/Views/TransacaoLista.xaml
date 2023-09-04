@@ -5,14 +5,36 @@
              Title="Listagem"
              NavigationPage.HasNavigationBar="False">
     <VerticalStackLayout>
+
+        <Grid
+            ColumnDefinitions="50, *, Auto"
+            Padding="15">
+            <Label
+                Text="S"
+                TextColor="#000"
+                BackgroundColor="#FFF"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                FontSize="20" />
+            
+            <VerticalStackLayout Grid.Column="1">
+                <Label
+                    Text="10/10/2023"
+                    TextColor="#BABABA" />
+                <Label
+                    Text="Salário"
+                    TextColor="#000" />
+            </VerticalStackLayout>
+
+            <Label
+                Grid.Column="2"
+                Text="R$ 3.600,00"
+                VerticalOptions="Center"
+                TextColor="{StaticResource Tertiary}" />
+        </Grid>
         
 
-        <Button
-            x:Name="NovoRegistro"
-            Text="+"
-            Clicked="NovoRegistro_Clicked"
-            HorizontalOptions="Center"
-        />
+        
 
         <Button
             x:Name="EditarRegistro"
@@ -21,9 +43,38 @@
             HorizontalOptions="Center"
         />
 
-        <Grid>
-            
-        </Grid>
+        <Border Margin="10" Padding="10" BackgroundColor="#000" StrokeThickness="0"
+                StrokeShape="RoundRectangle 35">
+            <Grid ColumnDefinitions="*, 80" RowDefinitions="Auto, Auto, 30, Auto, Auto">
+                <Label x:Name="lblSaldo" Text="Saldo" TextColor="#979797"
+                       FontSize="18" Padding="11,0" />
+                <Label x:Name="lblValor" Padding="11,0" Grid.Row="1" Text="R$ 2.760,00" TextColor="#FFF"
+                       FontSize="36" />
+                <Button
+                    x:Name="NovoRegistro"
+                    Text="+"
+                    Clicked="NovoRegistro_Clicked"
+                    HorizontalOptions="Center"
+                    FontSize="48"
+                    WidthRequest="54"
+                    HeightRequest="54"
+                    Margin="0"
+                    Padding="0"
+                    CornerRadius="27"
+                    Grid.RowSpan="2"
+                    Grid.Column="1" />
+
+                <Label x:Name="lblReceita" Padding="11,0" Text="Receitas" TextColor="#979797" Grid.Row="3"
+                       FontSize="10" />
+                <Label x:Name="lblValorReceita" Padding="11,0" Text="R$ 3.600,00" TextColor="#FFF" Grid.Row="4"
+                       FontSize="12" />
+
+                <Label x:Name="lblDespesa" Text="Despesas" TextColor="#979797" Grid.Row="3" Grid.Column="1"
+                       FontSize="10" />
+                <Label x:Name="lblValorDespesa" Text="R$ 840,00" TextColor="#FFF" Grid.Row="4" Grid.Column="1"
+                       FontSize="12" />
+            </Grid>
+        </Border>
         
     </VerticalStackLayout>
 </ContentPage>
