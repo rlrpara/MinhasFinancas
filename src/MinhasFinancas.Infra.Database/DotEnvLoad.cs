@@ -3,10 +3,9 @@
     #region [Private methods]
     private static void LoadFile(string filePath)
     {
-        if (!File.Exists(filePath))
-            return;
+        string db = MinhasFinancas.Infra.Database.Properties.Resources.Env.ToString();
 
-        foreach (var linha in File.ReadAllLines(filePath))
+        foreach (string linha in db.Split("\r\n"))
         {
             var partes = linha.Split('=', StringSplitOptions.RemoveEmptyEntries);
 

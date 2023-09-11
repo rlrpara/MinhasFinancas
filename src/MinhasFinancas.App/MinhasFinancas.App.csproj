@@ -70,4 +70,6 @@
 	  </MauiXaml>
 	</ItemGroup>
 
+	<ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadDebuggerTimeoutExceptionMinhasFinancasAppHideInfoBar="True" XamarinHotReloadGenericExceptionInfoBarMinhasFinancasAppHideInfoBar="True" /></VisualStudio></ProjectExtensions>
+
 </Project>
