@@ -244,6 +244,7 @@ public class DatabaseConfiguration : DatabaseConfigurationBase, IDatabaseConfigu
     public IBaseRepository GerenciarBanco(ETipoProjeto projeto, string pastaBanco)
     {
         _pastaBanco = pastaBanco;
+
         try
         {
             if (ServidorAtivo())

@@ -10,7 +10,10 @@ namespace MinhasFinancas.App
     {
         public static MauiApp CreateMauiApp()
         {
-            IBaseRepository baseRepository = new DatabaseConfiguration().GerenciarBanco(ETipoProjeto.Desktop, FileSystem.AppDataDirectory);
+            string? dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData));
+
+            IBaseRepository baseRepository = new DatabaseConfiguration().GerenciarBanco(ETipoProjeto.Desktop, dbPath);
+            //IBaseRepository baseRepository = new DatabaseConfiguration().GerenciarBanco(ETipoProjeto.Desktop, FileSystem.AppDataDirectory);
 
             var builder = MauiApp.CreateBuilder();
             builder
