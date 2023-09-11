@@ -10,6 +10,7 @@
             Padding="15"
             StrokeShape="RoundRectangle 30"
             Margin="15">
+            <Label TextColor="Red" x:Name="lblError" IsVisible="false" />
             <Grid ColumnDefinitions="*, 30">
                 <Label 
                     Text="Novo"
@@ -34,14 +35,14 @@
 
         <Grid ColumnDefinitions="*,*" Margin="30, 0">
             <RadioButton
-                x:Name="Receita"
+                x:Name="rbReceita"
                 Content="Receita"
                 Grid.Column="0"
                 IsChecked="True"
                 TextColor="Black"
             />
             <RadioButton
-                x:Name="Despesa"
+                x:Name="rbDespesa"
                 Content="Despesa"
                 HorizontalOptions="End"
                 Grid.Column="1"
@@ -70,10 +71,12 @@
         />
 
         <Button
+            x:Name="btnSalvar"
             Text="Salvar"
             Margin="15, 0"
             TextColor="Black"
             HorizontalOptions="Center"
+            Clicked="btnSalvar_Clicked"
         />
 
     </VerticalStackLayout>
