@@ -34,35 +34,36 @@
 
         <Grid ColumnDefinitions="*,*" Margin="30, 0">
             <RadioButton
-                Grid.Column="0"
                 x:Name="Receita"
-                IsChecked="True"
                 Content="Receita"
+                Grid.Column="0"
+                IsChecked="True"
                 TextColor="Black"
             />
             <RadioButton
-                HorizontalOptions="End"
-                Grid.Column="1"
                 x:Name="Despesa"
                 Content="Despesa"
+                HorizontalOptions="End"
+                Grid.Column="1"
                 TextColor="Black"
             />
         </Grid>
 
         <Entry
-            x:Name="Nome"
+            x:Name="txtNome"
             Placeholder="Nome"
             TextColor="Black"
             Margin="15, 0"
         />
         
         <DatePicker
+            x:Name="dtpLancamento"
             TextColor="Black"
             Margin="15, 0"
         />
         
         <Entry
-            x:Name="Valor"
+            x:Name="txtValor"
             Placeholder="Valor"
             TextColor="Black"
             Margin="15, 0"

@@ -43,8 +43,12 @@
             HorizontalOptions="Center"
         />
 
-        <Border Margin="10" Padding="10" BackgroundColor="#000" StrokeThickness="0"
-                StrokeShape="RoundRectangle 35">
+        <Border
+            Margin="10"
+            Padding="10"
+            BackgroundColor="#000"
+            StrokeThickness="0"
+            StrokeShape="RoundRectangle 35">
             <Grid ColumnDefinitions="*, 80" RowDefinitions="Auto, Auto, 30, Auto, Auto">
                 <Label x:Name="lblSaldo" Text="Saldo" TextColor="#979797"
                        FontSize="18" Padding="11,0" />
