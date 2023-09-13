@@ -8,10 +8,11 @@ namespace MinhasFinancas.CrossCutting.Ioc;
 
 public static class NativeInjector
 {
-    public static void RegisterServices(this IServiceCollection services)
+    public static MauiAppBuilder RegisterServices(this MauiAppBuilder services)
     {
         #region Services
         services.AddTransient<ITransacaoService, TransacaoService>();
+        services.AddTransient<ITransacaoRepository, TransacaoRepository>();
         #endregion
 
         #region Repositories

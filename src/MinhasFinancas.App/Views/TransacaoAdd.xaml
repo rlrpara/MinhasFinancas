@@ -10,8 +10,8 @@
             Padding="15"
             StrokeShape="RoundRectangle 30"
             Margin="15">
-            <Label TextColor="Red" x:Name="lblError" IsVisible="false" />
             <Grid ColumnDefinitions="*, 30">
+                <Label TextColor="Red" x:Name="lblError" IsVisible="false" />
                 <Label 
                     Text="Novo"
                     VerticalOptions="Center" 
