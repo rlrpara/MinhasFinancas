@@ -25,7 +25,8 @@ public class BaseRepository : IBaseRepository
         NomeBanco = Environment.GetEnvironmentVariable("BANCO")?.ToLower(),
         Usuario = Environment.GetEnvironmentVariable("USUARIO"),
         Senha = Environment.GetEnvironmentVariable("SENHA"),
-        TipoBanco = (ETipoBanco)Convert.ToInt32(Environment.GetEnvironmentVariable("TIPOBANCO"))
+        TipoBanco = (ETipoBanco)Convert.ToInt32(Environment.GetEnvironmentVariable("TIPOBANCO")),
+        PastaBanco = Environment.GetEnvironmentVariable("PASTA")
     };
 
     private static string ObterNomeTabela<T>()

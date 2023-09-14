@@ -48,7 +48,7 @@ public partial class TransacaoAdd : ContentPage
     {
         Nome = txtNome.Text,
         DataLancamento = dtpLancamento.Date,
-        Tipo = rbReceita.IsChecked ? TipoTransacao.Entrada : TipoTransacao.Saida,
+        Tipo = rbReceita.IsChecked ? (int)TipoTransacao.Entrada : (int)TipoTransacao.Saida,
         Valor = double.TryParse(txtValor.Text, out double valorSaida) && valorSaida >= 0 ? valorSaida : 0,
         DataCadastro = DateTime.Now,
         DataAtualizacao = DateTime.Now,

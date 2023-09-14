@@ -1,5 +1,4 @@
 ﻿using MinhasFinancas.Domain.Entities.Base;
-using MinhasFinancas.Domain.Enum;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MinhasFinancas.Domain.Entities;
@@ -7,16 +6,20 @@ namespace MinhasFinancas.Domain.Entities;
 [Table("TRANSACAO")]
 public class Transacao : EntityBase
 {
-    [Column(name: "TIPO")]
-    public TipoTransacao Tipo { get; set; }
+    [Nota()]
+    [Column(name: "TIPO", Order = 2)]
+    public int Tipo { get; set; }
 
-    [Column(name: "NOME")]
+    [Nota()]
+    [Column(name: "NOME", Order = 3)]
     public string? Nome { get; set; }
 
-    [Column(name: "DATA_LANCAMENTO")]
-    public DateTimeOffset DataLancamento { get; set; }
+    [Nota()]
+    [Column(name: "DATA_LANCAMENTO", Order = 4)]
+    public DateTime? DataLancamento { get; set; }
 
-    [Column(name: "VALOR")]
+    [Nota()]
+    [Column(name: "VALOR", Order = 5)]
     public double Valor { get; set; }
 
 }

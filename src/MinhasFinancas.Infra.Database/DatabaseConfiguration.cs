@@ -34,16 +34,23 @@ public class DatabaseConfiguration : DatabaseConfigurationBase, IDatabaseConfigu
     #endregion
 
     #region [Métodos Privados]
-    private ParametrosConexao ObterParametrosConexao(bool RemoverNomeBanco = false) => new()
+    private ParametrosConexao ObterParametrosConexao(bool RemoverNomeBanco = false)
     {
-        Servidor = Environment.GetEnvironmentVariable("SERVIDOR"),
-        NomeBanco = RemoverNomeBanco ? "" : Environment.GetEnvironmentVariable("BANCO")?.ToLower(),
-        Porta = Environment.GetEnvironmentVariable("PORTA"),
-        Usuario = Environment.GetEnvironmentVariable("USUARIO"),
-        Senha = Environment.GetEnvironmentVariable("SENHA"),
-        TipoBanco = (ETipoBanco)Convert.ToInt32(Environment.GetEnvironmentVariable("TIPOBANCO")),
-        PastaBanco = _pastaBanco
-    };
+        var paramteros = new ParametrosConexao()
+        {
+            Servidor = Environment.GetEnvironmentVariable("SERVIDOR"),
+            NomeBanco = RemoverNomeBanco ? "" : Environment.GetEnvironmentVariable("BANCO")?.ToLower(),
+            Porta = Environment.GetEnvironmentVariable("PORTA"),
+            Usuario = Environment.GetEnvironmentVariable("USUARIO"),
+            Senha = Environment.GetEnvironmentVariable("SENHA"),
+            TipoBanco = (ETipoBanco)Convert.ToInt32(Environment.GetEnvironmentVariable("TIPOBANCO")),
+            PastaBanco = _pastaBanco
+        };
+        
+        Environment.SetEnvironmentVariable("PASTA", _pastaBanco);
+
+        return paramteros;
+    }
     private string ObterProcedureDropConstraint()
     {
         var sqlPessquisa = new StringBuilder();
@@ -191,6 +198,7 @@ public class DatabaseConfiguration : DatabaseConfigurationBase, IDatabaseConfigu
         Criar(ObterProcedureDropConstraint());
 
         Criar(_geradorDapper.CriarTabela<Usuario>());
+        Criar(_geradorDapper.CriarTabela<Transacao>());
     }
     private void InsereDadosPadroes()
     {
