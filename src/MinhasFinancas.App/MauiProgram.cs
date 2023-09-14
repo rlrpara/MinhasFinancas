@@ -40,7 +40,7 @@ namespace MinhasFinancas.App
 #elif WINDOWS
             pasta = AppDomain.CurrentDomain.BaseDirectory.ToString();
 #endif
-            IBaseRepository baseRepository = new DatabaseConfiguration(pasta, tipo).GerenciarBanco();
+            _ = new DatabaseConfiguration(pasta, tipo).GerenciarBanco();
 
             var builder = MauiApp.CreateBuilder();
 
