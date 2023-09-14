@@ -55,6 +55,7 @@
 	<ItemGroup>
 	  <ProjectReference Include="..\MinhasFinancas.Domain\MinhasFinancas.Domain.csproj" />
 	  <ProjectReference Include="..\MinhasFinancas.Infra.Database\MinhasFinancas.Infra.Database.csproj" />
+	  <ProjectReference Include="..\MinhasFinancas.Service\MinhasFinancas.Service.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

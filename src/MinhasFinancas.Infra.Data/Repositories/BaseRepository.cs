@@ -43,6 +43,11 @@ public class BaseRepository : IBaseRepository
         _parametrosConexao = ObterParametrosConexao();
         _geradorDapper = new GeradorDapper(_parametrosConexao);
     }
+    public BaseRepository(ParametrosConexao parametrosConexao)
+    {
+        _parametrosConexao = parametrosConexao;
+        _geradorDapper = new GeradorDapper(_parametrosConexao);
+    }
     #endregion
 
     #region [Métodos Públicos]

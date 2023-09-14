@@ -1,26 +1,43 @@
-﻿public static class DotEnvLoad
+﻿using MinhasFinancas.Domain.Enum;
+
+public static class DotEnvLoad
 {
     #region [Private methods]
-    private static void LoadFile(string filePath)
+    private static void LoadFile(string filePath, ETipoProjeto tipo)
     {
-        string db = MinhasFinancas.Infra.Database.Properties.Resources.Env.ToString();
-
-        foreach (string linha in db.Split("\r\n"))
+        if(tipo == ETipoProjeto.Mobile)
         {
-            var partes = linha.Split('=', StringSplitOptions.RemoveEmptyEntries);
+            string db = MinhasFinancas.Infra.Database.Properties.Resources.Env.ToString();
 
-            if (partes.Length != 2)
-                continue;
+            foreach (string linha in db.Split("\r\n"))
+            {
+                var partes = linha.Split('=', StringSplitOptions.RemoveEmptyEntries);
 
-            Environment.SetEnvironmentVariable(partes[0], partes[1]);
+                if (partes.Length != 2)
+                    continue;
+
+                Environment.SetEnvironmentVariable(partes[0], partes[1]);
+            }
+        }
+        else if(tipo == ETipoProjeto.Desktop)
+        {
+            foreach (var item in File.ReadAllLines(filePath))
+            {
+                var partes = item.Split('=', StringSplitOptions.RemoveEmptyEntries);
+
+                if (partes.Length != 2)
+                    continue;
+
+                Environment.SetEnvironmentVariable(partes[0], partes[1]);
+            }
         }
     }
     #endregion
 
     #region [Public methods]
-    public static void Load()
+    public static void Load(string pasta, ETipoProjeto tipo)
     {
-        LoadFile(Path.Combine(AppContext.BaseDirectory.ToString(), ".env_local"));
+        LoadFile(Path.Combine(pasta, ".env_local"), tipo);
     }
 
     #endregion

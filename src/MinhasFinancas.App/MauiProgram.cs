@@ -32,7 +32,15 @@ namespace MinhasFinancas.App
         #region [Public Metods]
         public static MauiApp CreateMauiApp()
         {
-            IBaseRepository baseRepository = new DatabaseConfiguration().GerenciarBanco(ETipoProjeto.Desktop, AppContext.BaseDirectory);
+            var pasta = "";
+            var tipo = ETipoProjeto.Desktop;
+#if ANDROID
+            pasta = AppContext.BaseDirectory.ToString();
+            tipo = ETipoProjeto.Mobile;
+#elif WINDOWS
+            pasta = AppDomain.CurrentDomain.BaseDirectory.ToString();
+#endif
+            IBaseRepository baseRepository = new DatabaseConfiguration(pasta, tipo).GerenciarBanco();
 
             var builder = MauiApp.CreateBuilder();
 

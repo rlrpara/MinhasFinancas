@@ -21,9 +21,11 @@ public class DatabaseConfiguration : DatabaseConfigurationBase, IDatabaseConfigu
     #endregion
 
     #region [Construtor]
-    public DatabaseConfiguration()
+    public DatabaseConfiguration(string pasta, ETipoProjeto tipo)
     {
-        DotEnvLoad.Load();
+        _pastaBanco = pasta;
+
+        DotEnvLoad.Load(_pastaBanco, tipo);
 
         _parametrosConexao = ObterParametrosConexao();
         _geradorDapper = new GeradorDapper(_parametrosConexao);
@@ -241,10 +243,8 @@ public class DatabaseConfiguration : DatabaseConfigurationBase, IDatabaseConfigu
 
     #region Métodos Públicos
     public void CriarSchema(string nomeSchema) => Criar($"CREATE SCHEMA IF NOT EXISTS {nomeSchema}");
-    public IBaseRepository GerenciarBanco(ETipoProjeto projeto, string pastaBanco)
+    public IBaseRepository GerenciarBanco()
     {
-        _pastaBanco = pastaBanco;
-
         try
         {
             if (ServidorAtivo())
@@ -263,7 +263,7 @@ public class DatabaseConfiguration : DatabaseConfigurationBase, IDatabaseConfigu
 
                 //ExecutarScripts();
 
-                return new BaseRepository();
+                return new BaseRepository(ObterParametrosConexao(false));
             }
             else
                 throw new Exception($"Base de dados Offline/Erro. Erro: {_errorMessage}");
